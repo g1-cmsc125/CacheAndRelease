@@ -3,70 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CacheAndRelease Interface</title>
-    <style>
-        body {
-            background-color: #0d1117;
-            color: #58a6ff;
-            font-family: 'Consolas', 'Courier New', monospace;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .dashboard {
-            background-color: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 8px;
-            padding: 40px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.8);
-            text-align: center;
-            width: 400px;
-        }
-        h1 {
-            color: #c9d1d9;
-            margin-top: 0;
-            border-bottom: 1px solid #30363d;
-            padding-bottom: 15px;
-        }
-        .status-line {
-            font-size: 1.1em;
-            margin: 20px 0;
-            color: #8b949e;
-        }
-        button {
-            background-color: #238636;
-            color: #ffffff;
-            border: none;
-            padding: 12px 24px;
-            font-size: 16px;
-            font-family: inherit;
-            cursor: pointer;
-            border-radius: 6px;
-            transition: background-color 0.2s;
-        }
-        button:hover {
-            background-color: #2ea043;
-        }
-    </style>
+    <title>STACK•EU UI</title>
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
-    <div class="dashboard">
-        <h1>CacheAndRelease</h1>
-        <div class="status-line">
-            System Status: <span id="memory-status" style="color: #f85149;">Awaiting Initialization...</span>
+
+    <div class="app-container">
+        <div class="visual-pane">
+            <div class="vertical-track">
+
+                <img src="assets/home-logo.png" alt="">
+            </div>
         </div>
-        <button onclick="allocateCache()">Initialize Cache Engine</button>
+
+        <div class="content-pane">
+            <h1 class="brand-logo">STACK<span>•</span>EU</h1>
+            <div class="btn-row">
+                <a class="btn-main" href="pages/start.html">Start</a>
+                <a class="btn-sq"href="pages/how.html">?</a>
+            </div>
+        </div>
     </div>
 
-    <script>
-        function allocateCache() {
-            const statusElement = document.getElementById('memory-status');
-            statusElement.innerText = "Allocated [0x00FA42]";
-            statusElement.style.color = "#3fb950";
-        }
-    </script>
 </body>
 </html>
