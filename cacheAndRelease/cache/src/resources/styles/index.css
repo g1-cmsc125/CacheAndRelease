@@ -1,11 +1,17 @@
 :root {
-    --bg-color: #ede9d0;
-    --text-color: #606844;
-    --green-main: #a2bc7a;
+    --bg-color: #F0EAB6;
+    --text-color: #6A6928;
+    --green-main: #8DB656;
     --green-pale: #cddba9;
     --yellow-muted: #cdbf72;
     --white-glow: #EDF6D7;
     --dark-shadow: rgba(0, 0, 0, 0.12);
+
+    --card-bg-light: #f1f8e6;
+    --card-bg-dark: #97b56a;
+    --text-olive: #606844;
+    --shadow-inset: inset 6px 6px 12px rgba(0, 0, 0, 0.1);
+    --shadow-drop: 4px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 * {
@@ -110,7 +116,7 @@ body {
     margin: 0 5px;
 }
 
-.btn-main a {
+a {
     text-decoration: none;
     color: white;
 }
@@ -120,7 +126,7 @@ body {
     gap: 15px;
 }
 
-button {
+a {
     background-color: var(--green-main);
     color: white;
     border: none;
@@ -156,3 +162,20 @@ button:active {
     transform: translateY(1px);
     box-shadow: 0 2px 5px var(--dark-shadow);
 }
+
+/* how and start specific reuse */
+.page-wrapper {
+    width: 900px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* --- Header & Logo --- */
+header {
+    margin-bottom: 30px;
+}
+
+header img {
+    width: 75px;
+}
+
