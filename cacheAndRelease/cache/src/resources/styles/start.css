@@ -3,7 +3,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    margin-top: 20px;
 }
 
 .config-panel {
@@ -83,16 +82,6 @@
     border-color: var(--card-bg-dark);
 }
 
-/* --- Positioning the Footer --- */
-footer {
-    position: fixed; /* Keeps it at the bottom of the viewport */
-    bottom: 25px;    /* Positions it slightly above the very bottom */
-    left: 50%;
-    transform: translateX(-50%); /* Perfectly centers the footer */
-    width: auto;     /* Ensures it doesn't stretch 100% */
-    z-index: 100;
-}
-
 /* --- The Floating Simulate Button --- */
 .btn-simulate {
     background-color: var(--card-bg-dark);
@@ -131,6 +120,43 @@ footer {
 
 /* --- Page Wrapper Adjustment --- */
 .page-wrapper {
-    padding-bottom: 125px; /* Creates space so content isn't hidden behind the button */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    
+}
 
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5em;
+}
+
+header {
+    margin: 0;
+}
+
+/* After */
+.error-message {
+    color: #c0392b;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 4px 10px;
+    display: none;
+    margin-top: -15px; /* pull it up closer to the input above */
+    margin-bottom: 10px;
+}
+
+.error-message.error-visible {
+    display: block;
+}
+
+.general-error {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 8px;
 }

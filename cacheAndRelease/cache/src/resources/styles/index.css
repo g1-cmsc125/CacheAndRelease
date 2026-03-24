@@ -28,7 +28,8 @@ body {
     align-items: center;
     color: var(--text-color);
 
-    height: 100vh;
+    min-height: 100vh;
+    overflow-y: auto;
 }
 
 .app-container {
