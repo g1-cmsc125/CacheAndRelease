@@ -6,11 +6,12 @@
     <title>Configure Simulation - Stackeu</title>
     <link rel="stylesheet" href="../styles/index.css">
     <link rel="stylesheet" href="../styles/start.css">
+    <script src="../scripts/start.js"></script>
 </head>
 <body>
 
     <div class="page-wrapper">
-        <header class="header">
+        <header>
             <img src="../assets/logo.png" alt="Stackeu Logo">
         </header>
 
@@ -19,20 +20,23 @@
                 <div class="input-group">
                     <h2 class="section-title">Enter Reference String</h2>
                     <p class="sub-label">Length must be 10-40 and input values must be 0-20</p>
-                    <input type="text" class="main-input" placeholder="">
+                    <input type="text" id="referenceString" class="main-input" placeholder="Enter reference string">
+                    <div id="referenceError" class="error-message"></div>
                 </div>
 
                 <div class="input-group">
                     <h2 class="section-title">Enter Frame size</h2>
                     <p class="sub-label">Size must be 3-10</p>
-                    <input type="number" class="main-input" placeholder="">
+                    <input type="number" id="frameSize" class="main-input" placeholder="Enter frame size">
+                    <div id="frameSizeError" class="error-message"></div>
                 </div>
 
                 <div class="action-buttons">
-                    <button class="btn-secondary">Randomize</button>
-                    <button class="btn-secondary">Upload</button>
-                    <button class="btn-secondary">Clear input</button>
+                    <button id="randomizeBtn" class="btn-secondary">Randomize</button>
+                    <button id="uploadBtn" class="btn-secondary">Upload</button>
+                    <button id="clearInputBtn" class="btn-secondary">Clear input</button>
                 </div>
+                <input type="file" id="fileUpload" accept=".txt" style="display: none;">
             </section>
 
             <section class="config-panel">
@@ -52,7 +56,8 @@
         </main>
 
         <footer>
-            <a href="simulate.html" class="btn-simulate">Simulate</a>
+            <div id="generalError" class="error-message"></div>
+            <button id="simulateBtn" class="btn-simulate">Simulate</button>
         </footer>
     </div>
 
