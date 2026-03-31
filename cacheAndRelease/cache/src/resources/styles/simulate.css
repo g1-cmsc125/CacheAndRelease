@@ -78,15 +78,46 @@
 
 /* --- The Grid --- */
 .sim-grid-container {
-    margin: 25px 0px;
+    width: 100%;
+    overflow-x: auto;      /* Turns on horizontal scrolling */
+    overflow-y: hidden;    /* Prevents accidental vertical shifting */
+    padding-bottom: 15px;  /* Gives the scrollbar some breathing room */
 }
 
-.sim-grid {
-    display: grid;
-    /* 10 columns based on reference string length */
-    grid-template-columns: repeat(10, 1fr); 
-    margin-bottom: 10px;
-    justify-items: center;
+/* Optional: Make the scrollbar look sleek and modern */
+.sim-grid-container::-webkit-scrollbar {
+    height: 8px;
+}
+.sim-grid-container::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 4px;
+}
+.sim-grid-container::-webkit-scrollbar-thumb {
+    background: #c1c1c1; 
+    border-radius: 4px;
+}
+.sim-grid-container::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8; 
+}
+
+/* Force perfect centering inside the grid cells */
+.num-cell, 
+.frame, 
+.hit, 
+.miss {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Ensures the cell takes up the full column width */
+}
+
+/* Keep the container scrollable from the previous step */
+.sim-grid-container {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 15px; 
 }
 
 /* Formatting for numbers above frames */
